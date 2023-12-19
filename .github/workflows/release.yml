@@ -58,8 +58,7 @@ jobs:
       if: ${{ steps.release.outputs.release-version != '' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       uses: docker/build-push-action@v5
       with:
-        context: ./frontend
-        file: ./frontend/Dockerfile
+        context: ./
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
