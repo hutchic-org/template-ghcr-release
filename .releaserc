@@ -1,7 +1,7 @@
 {
   "branches": ["main"],
   "tagFormat": "${version}",
-  "repositoryUrl": "https://github.com/CorrosiveStudio/empathy-ai.git",
+  "repositoryUrl": "https://github.com/hutchic-org/template-ghcr-release.git",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -40,13 +40,6 @@
         }
       }
     ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          { "path": "docker-compose.yaml", "label": "Docker Compose" },
-        ]
-      }
-    ]
+    "@semantic-release/github",
   ]
 }

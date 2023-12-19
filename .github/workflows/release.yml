@@ -51,7 +51,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ghcr.io/corrosivestudio/${{ github.event.repository.name }}
+        images: ghcr.io/hutchic-org/${{ github.event.repository.name }}
         tags: ${{ env.TAGS }}
 
     - name: Build and Push Docker image
@@ -63,5 +63,5 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
-        cache-from: type=gha,ref=ghcr.io/corrosivestudio/empathy-ai:latest
+        cache-from: type=gha,ref=ghcr.io/hutchic-org/${{ github.event.repository.name }}
         cache-to: type=gha,mode=max
