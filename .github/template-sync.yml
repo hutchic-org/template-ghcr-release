@@ -1,9 +1,9 @@
 ---
 additional:
-- template-docker
-- template-github-release
+- temp
 
 files:
+- '!Dockerfile'
 - '!README.md'
 - '!.gitignore'
 - '!.pre-commit-config.yaml'
